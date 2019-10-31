@@ -12,8 +12,6 @@ namespace OMDSP
     {
         public string username;
         public List<string> NGOs;
-        TextBox textBox;
-        static int i = 1;
         string name;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -43,13 +41,13 @@ namespace OMDSP
                 obj.cmd.CommandText = query;
                 SqlDataReader dataReader;
                 dataReader = obj.cmd.ExecuteReader();
-                while(dataReader.Read())
+                while (dataReader.Read())
                 {
                     temp.Add(dataReader.GetValue(0).ToString());
                 }
 
             }
-            catch(Exception ae) { }
+            catch (Exception ae) { }
             return temp;
 
         }

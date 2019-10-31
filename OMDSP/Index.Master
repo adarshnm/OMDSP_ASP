@@ -47,8 +47,9 @@
         </div>
 
 
-   <footer class="footer text-center">
-       <p>&copy; <%: DateTime.Now.Year %> - Adarsh Mohan Amel T Kavana</p>
+
+   <footer class="footer">
+       <p>&copy; <%: DateTime.Now.Year %> - Adarsh Mohan</p>
    </footer>
     <script src="Scripts/jquery-3.0.0.min.js"></script>
     <script src="Scripts/popper.min.js"></script>

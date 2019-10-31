@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 .heading {
     color: #ed2a45;
     font-family: 'Conv_BreeSerif-Regular';
@@ -14,3 +15,4 @@
     margin: 0;
     padding: 35px 0 0;
     text-transform: uppercase;
+}
