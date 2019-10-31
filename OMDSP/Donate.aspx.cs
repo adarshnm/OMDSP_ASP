@@ -12,12 +12,11 @@ namespace OMDSP
     {
         public string username;
         public List<string> NGOs;
-        TextBox textBox;
-        static int i = 1;
+        string name;
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["username"] == null)
+            if (Session["username"] == null || Session["name"] == null)
             {
                 Response.Redirect("Home.aspx");
 
@@ -25,6 +24,7 @@ namespace OMDSP
             else
             {
                 username = Session["username"].ToString();
+                name = Session["name"].ToString();
                 NGOs = getNGODetails();
             }
         }
@@ -41,13 +41,13 @@ namespace OMDSP
                 obj.cmd.CommandText = query;
                 SqlDataReader dataReader;
                 dataReader = obj.cmd.ExecuteReader();
-                while(dataReader.Read())
+                while (dataReader.Read())
                 {
                     temp.Add(dataReader.GetValue(0).ToString());
                 }
 
             }
-            catch(Exception ae) { }
+            catch (Exception ae) { }
             return temp;
 
         }
@@ -70,11 +70,12 @@ namespace OMDSP
                 obj.cmd.ExecuteNonQuery();
                 string regCredentials = "INSERT INTO [dbo].[donors] ([name], [ngo], [date]) VALUES (@name, @ng, @date)";
                 obj.cmd.CommandText = regCredentials;
-                obj.cmd.Parameters.AddWithValue("@name", username);
+                obj.cmd.Parameters.AddWithValue("@name", name);
                 obj.cmd.Parameters.AddWithValue("@ng", DropDownList1.SelectedValue);
                 obj.cmd.Parameters.AddWithValue("@date", DateTime.Now.Date.ToShortDateString());
                 obj.cmd.ExecuteNonQuery();
                 ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Donation Successfull')", true);
+                Response.Redirect("User.aspx");
             }
             catch (Exception ae) { ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Something happened')", true); }
         }
