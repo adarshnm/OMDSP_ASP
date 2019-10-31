@@ -85,8 +85,16 @@
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Register.aspx" />
+    <Content Include="res\css\home_style.css" />
     <Content Include="res\css\style.css" />
+    <Content Include="res\fonts\BreeSerif-Regular.svg" />
+    <Content Include="res\images\doctors.jpg" />
+    <Content Include="res\images\finger.jpg" />
+    <Content Include="res\images\hands.jpg" />
     <Content Include="res\images\head.svg" />
+    <Content Include="res\images\logo.png" />
+    <Content Include="res\images\people.jpg" />
+    <Content Include="res\images\volunteer.jpg" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -109,6 +117,9 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="res\fonts\BreeSerif-Regular.eot" />
+    <Content Include="res\fonts\BreeSerif-Regular.ttf" />
+    <Content Include="res\fonts\BreeSerif-Regular.woff" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

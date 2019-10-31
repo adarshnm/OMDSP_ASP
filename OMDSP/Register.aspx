@@ -84,8 +84,9 @@
     <div class="form-check">
       <asp:CheckBox ID="ridCheck" CssClass="form-check-input" runat="server" />
       <label class="form-check-label" for="gridCheck">
-        Check me out
+        I agree to all terms
       </label>
+        <asp:CustomValidator ID="CustomValidator1" runat="server" OnServerValidate="CheckBoxRequired_ServerValidate" ErrorMessage="You should agree to all erms."></asp:CustomValidator>
     </div>
   </div>
   <asp:Button CssClass="btn btn-primary" ID="Button1" runat="server" Text="Register" OnClick="Button1_Click" />
