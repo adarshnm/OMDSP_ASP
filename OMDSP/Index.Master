@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Index.master.cs" Inherits="OMDSP.Index" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="res/css/style.css" rel="stylesheet" />
+    <title>Medicine Donation Portal</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <asp:HyperLink ID="HyperLink5" CssClass="navbar-brand" NavigateUrl="~/Home.aspx" runat="server">   
+                <img src="res/images/head.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                M D P
+            </asp:HyperLink>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+          <asp:HyperLink CssClass="nav-link"  ID="HyperLink1" NavigateUrl="~/Home.aspx" runat="server">Home</asp:HyperLink>
+      </li>
+      <li class="nav-item">
+        <asp:HyperLink CssClass="nav-link"  ID="HyperLink2" NavigateUrl="~/Register.aspx" runat="server">Sign Up</asp:HyperLink>
+      </li>
+      <li class="nav-item">
+        <asp:HyperLink CssClass="nav-link"  ID="HyperLink3" NavigateUrl="~/Donors.aspx" runat="server">Donors</asp:HyperLink>
+      </li>
+      <li class="nav-item">
+        <asp:HyperLink CssClass="nav-link"  ID="HyperLink4" NavigateUrl="~/Login.aspx" runat="server"><%=name%></asp:HyperLink>
+      </li>
+    </ul>
+  </div>
+</nav>
+        <div class="container content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+   <footer class="footer">
+       <p>&copy; <%: DateTime.Now.Year %> - Adarsh Mohan</p>
+   </footer>
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>
